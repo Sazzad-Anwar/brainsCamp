@@ -1,16 +1,14 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700&family=Ubuntu+Condensed&display=swap');
+@import '~antd/dist/antd.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+@layer base {
+    .normal-transition {
+        @apply transition-all ease-in-out duration-300;
+    }
+    .navMenu {
+        @apply text-xl font-bold dark:text-white text-purple-800 group-hover:text-orange-600 hover:text-orange-600 transition-all duration-300 ease-in-out relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-0.5 after:bg-purple-800 after:rounded-lg after:normal-transition hover:after:w-1/2 group-hover:after:w-1/2 mx-2;
+    }
 }
