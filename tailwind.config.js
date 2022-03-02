@@ -15,13 +15,15 @@ module.exports = {
     textColor: (theme) => ({
       ...theme('colors'),
       primary: '#6B21A8',
-      secondary: '#EA580C'
+      secondary: '#EA580C',
+      tertiary: '#acacac',
     }),
     backgroundColor: theme => ({
       ...theme('colors'),
       dark: '#0F172A',
       darkLight: '#243763',
-      secondary: '#EA580C'
+      secondary: '#EA580C',
+      primary: '#6B21A8'
     }),
     container: {
       padding: {

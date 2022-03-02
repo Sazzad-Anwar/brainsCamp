@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import HeroSlider from '../Components/HeroSlider'
 import NavBar from '../Components/Nav/NavBar'
 
 export default function Home() {
@@ -9,6 +10,9 @@ export default function Home() {
       </Head>
       <main>
         <NavBar />
+        <div className='dark:bg-dark normal-transition'>
+          <HeroSlider />
+        </div>
       </main>
     </>
   )

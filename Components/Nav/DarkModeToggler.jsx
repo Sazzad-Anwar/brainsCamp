@@ -8,8 +8,10 @@ const DarkModeToggler = () => {
             if ((localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
             ) {
                 document.documentElement.classList.add('dark');
+                setTheme('dark');
             } else {
                 localStorage.setItem('theme', 'light');
+                setTheme('light');
                 document.documentElement.classList.remove('dark');
             }
         }
@@ -25,9 +27,9 @@ const DarkModeToggler = () => {
         >
             {theme === 'dark'
                 ?
-                <i className="bi bi-lightbulb text-xl dark:text-secondary hover:text-secondary normal-transition peer"></i>
+                <i className="bi bi-lightbulb active:animate-ping text-xl dark:text-secondary hover:text-secondary normal-transition peer"></i>
                 :
-                <i className="bi bi-lightbulb-fill text-xl dark:text-secondary hover:text-secondary normal-transition"></i>
+                <i className="bi bi-lightbulb-fill active:animate-ping text-xl dark:text-secondary hover:text-secondary normal-transition"></i>
             }
         </span>
     );
