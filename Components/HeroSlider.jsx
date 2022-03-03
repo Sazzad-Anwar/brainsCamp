@@ -128,13 +128,13 @@ const HeroSlider = () => {
                     <i className="bi bi-arrow-right-square text-secondary text-3xl"></i>
                 </div>
             </Swiper>
-            <div className='grid grid-cols-1 lg:grid-cols-4'>
+            <div className='grid grid-cols-2 lg:grid-cols-4'>
                 {sliderBoxDetails.map((details, index) => (
                     <div key={details.serial} className={`py-10 relative ${sliderIndex === index + 1 ? 'bg-purple-100 dark:bg-darkLight dark:border-[#243763] ' : 'dark:border-[#243763] border-purple-100'} text-center border normal-transition`}>
                         <h1 className={`text-2xl ${sliderIndex === index + 1 ? 'font-bold dark:text-white animate__animated animate__zoomIn' : 'dark:text-gray-500'} font-semibold text-primary font-ubuntu normal-transition`}>
                             {details.title}
                         </h1>
-                        <h2 className={`absolute right-5 ${sliderIndex === index + 1 ? 'text-secondary' : 'dark:text-gray-500 text-gray-400'} normal-transition font-saira text-5xl font-semibold top-2`}>
+                        <h2 className={`absolute right-5 ${sliderIndex === index + 1 ? 'text-secondary' : 'dark:text-gray-500 text-gray-400'} normal-transition font-saira text-2xl lg:text-5xl font-semibold top-2`}>
                             {details.serial}
                         </h2>
                     </div>
