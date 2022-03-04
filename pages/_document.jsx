@@ -13,6 +13,9 @@ class MyDocument extends Document {
                         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                     />
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+                    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+                        rel="stylesheet">
+                    </link>
                 </Head>
                 <body>
                     <Main />

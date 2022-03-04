@@ -53,14 +53,18 @@ const HeroSlider = () => {
                 onSlideChange={(swiper) => setSliderIndex(swiper.activeIndex === 5 ? 1 : swiper.activeIndex)}
                 // onSwiper={(swiper) => console.log(swiper)}
                 slidesPerView={1}
-                className="mySwiper container mx-auto normal-transition"
+                className="mySwiper container mx-auto normal-transition relative"
             >
                 {/* sliders */}
                 <SwiperSlide className="w-full py-10 flex justify-center items-center">
                     {({ isActive }) => (
                         <div className='h-auto text-center '>
-                            <h1 className='text-lg text-primary lg:text-2xl xl:text-3xl 2xl:text-4xl font-saira font-bold dark:text-secondary'>BrainsCamp</h1>
-                            <p className='text-base mt-0 lg:text-2xl text-tertiary dark:text-gray-500 font-saira font-semibold'>Welcome To Our Official Website</p>
+                            <h1 className='text-lg text-primary lg:text-2xl xl:text-3xl 2xl:text-4xl font-saira font-bold dark:text-secondary normal-transition'>
+                                BrainsCamp
+                            </h1>
+                            <p className='text-base mt-0 lg:text-2xl text-tertiary normal-transition dark:text-gray-500 font-saira font-semibold'>
+                                Welcome To Our Official Website
+                            </p>
                             <Image className={isActive ? 'py-5 animate__animated animate__fadeInRight' : 'py-5'} src="/sliders/slider1.png" height={420} width={1120} alt="slider1" objectFit='cover' layout='intrinsic' />
                         </div>
                     )}
@@ -69,10 +73,10 @@ const HeroSlider = () => {
                     {({ isActive }) => (
                         <div className='h-auto items-center grid grid-cols-2 lg:grid-cols-2'>
                             <div className='w-2/3 mx-auto'>
-                                <h1 className='text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl font-saira font-bold dark:text-white'>
-                                    <span className='text-primary dark:text-secondary font-bold'>Local SEO</span> is about bringing your customers to your door-step.
+                                <h1 className='text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl normal-transition font-saira font-bold dark:text-white'>
+                                    <span className='text-primary normal-transition dark:text-secondary font-bold'>Local SEO</span> is about bringing your customers to your door-step.
                                 </h1>
-                                <p className='text-base mt-3 lg:text-2xl text-tertiary dark:text-gray-500 font-saira font-semibold'>
+                                <p className='text-base mt-3 lg:text-2xl normal-transition text-tertiary dark:text-gray-500 font-saira font-semibold'>
                                     Contact us and we will guide you
                                     how to boost up your local presence
                                     and help you to generate more ROI
@@ -91,11 +95,11 @@ const HeroSlider = () => {
                         <div className='h-auto items-center grid grid-cols-2 lg:grid-cols-2'>
                             <div className='w-2/3 mx-auto'>
                                 <h1 className='text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl font-saira font-semibold dark:text-white'>
-                                    <span className='text-primary dark:text-secondary font-bold'>Social Media
+                                    <span className='text-primary normal-transition dark:text-secondary font-bold'>Social Media
                                         Marketing Services
                                     </span>
                                 </h1>
-                                <p className='text-base mt-3 lg:text-2xl text-tertiary dark:text-gray-500 font-saira font-semibold'>
+                                <p className='text-base mt-3 lg:text-2xl normal-transition text-tertiary dark:text-gray-500 font-saira font-semibold'>
                                     An effective social strategy
                                     can help you grow your
                                     business, maintain your social presence and engage with the audience.
@@ -110,8 +114,8 @@ const HeroSlider = () => {
                 <SwiperSlide className="w-full py-10 flex justify-center items-center">
                     {({ isActive }) => (
                         <div className='h-auto text-center'>
-                            <h1 className='text-lg text-primary lg:text-2xl xl:text-3xl 2xl:text-4xl font-saira font-bold dark:text-secondary'>Full Customized App Development</h1>
-                            <p className='text-base w-96 mx-auto mt-0 lg:text-2xl text-tertiary dark:text-gray-500 font-saira font-semibold'>We create contemporary and user-friendly web and mobile application for your business at a cost-effective Price
+                            <h1 className='text-lg text-primary normal-transition lg:text-2xl xl:text-3xl 2xl:text-4xl font-saira font-bold dark:text-secondary'>Full Customized App Development</h1>
+                            <p className='text-base w-96 mx-auto mt-0 lg:text-2xl text-tertiary normal-transition dark:text-gray-500 font-saira font-semibold'>We create contemporary and user-friendly web and mobile application for your business at a cost-effective Price
                             </p>
                             <div className='my-10'>
                                 <Image className={isActive ? 'animate__animated animate__fadeInRight' : ''} src="/sliders/slider4.png" height={306} width={980} alt="slider1" objectFit='cover' layout='intrinsic' />
@@ -134,7 +138,7 @@ const HeroSlider = () => {
                         <h1 className={`text-2xl ${sliderIndex === index + 1 ? 'font-bold dark:text-white animate__animated animate__zoomIn' : 'dark:text-gray-500'} font-semibold text-primary font-ubuntu normal-transition`}>
                             {details.title}
                         </h1>
-                        <h2 className={`absolute right-5 ${sliderIndex === index + 1 ? 'text-secondary' : 'dark:text-gray-500 text-gray-400'} normal-transition font-saira text-2xl lg:text-5xl font-semibold top-2`}>
+                        <h2 className={`absolute right-5 ${sliderIndex === index + 1 ? 'text-secondary' : 'dark:text-gray-800 text-gray-200'} normal-transition font-saira text-2xl lg:text-5xl font-semibold top-2`}>
                             {details.serial}
                         </h2>
                     </div>
