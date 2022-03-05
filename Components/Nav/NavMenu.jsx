@@ -34,7 +34,7 @@ const NavMenu = ({ inDrawer, closeDrawer }) => {
 
     return (
         <div className="">
-            <div className={!inDrawer ? "block" : "block w-screen p-2 h-screen"}>
+            <div className={!inDrawer ? "block" : "block w-screen p-2 h-screen dark:bg-dark dark:text-white normal-transition"}>
                 <div className={`flex justify-between container mx-auto items-center border-b pb-3 dark:border-gray-700 border-gray-300 ${inDrawer ? 'block' : 'hidden'} lg:hidden`}>
                     <Branding />
                     <button>

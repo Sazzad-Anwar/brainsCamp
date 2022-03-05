@@ -9,7 +9,7 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 const DarkModeToggler = dynamic(() => import('./DarkModeToggler'), { ssr: false })
 
 const drawerWidth = 240;
-const NavBar = () => {
+const NavBar = ({ setNavBarHeight }) => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const headerRef = useRef(null);
     const emptyDiv = useRef(null)
@@ -23,17 +23,12 @@ const NavBar = () => {
     }
 
     useEffect(() => {
-        let setHeightAfterTimeOut = setTimeout(() => {
-            emptyDiv.current.style.height = headerRef.current.offsetHeight + 'px'
-        }, 500)
-        return () => {
-            clearTimeout(setHeightAfterTimeOut)
-        }
-    }, [])
+        setNavBarHeight(headerRef?.current?.offsetHeight);
+    }, [setNavBarHeight])
 
     return (
         <>
-            <header ref={headerRef} className="fixed shadow-lg dark:bg-dark bg-white normal-transition w-full z-10">
+            <header ref={headerRef} className="fixed shadow-lg dark:bg-dark bg-white normal-transition w-full z-40">
                 <nav className="container mx-auto flex items-center py-3">
                     <Branding />
                     <button className="block px-5 lg:hidden">
@@ -55,7 +50,7 @@ const NavBar = () => {
                     <NavMenu />
                 </nav>
             </header>
-            <div ref={emptyDiv} style={{ height: headerRef?.current?.offsetHeight }} />
+            {/* <div ref={emptyDiv} style={{ height: headerRef?.current?.offsetHeight }} /> */}
         </>
     )
 }

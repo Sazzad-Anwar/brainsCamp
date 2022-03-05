@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from "framer-motion"
 import { useState } from 'react';
 
-const HeroSlider = () => {
+const HeroSlider = ({ navBarHeight }) => {
 
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
@@ -32,7 +32,7 @@ const HeroSlider = () => {
 
 
     return (
-        <>
+        <div className='h-screen relative'>
             <Swiper
                 modules={[Autoplay, Pagination, Navigation, EffectFade]}
                 spaceBetween={0}
@@ -54,6 +54,7 @@ const HeroSlider = () => {
                 // onSwiper={(swiper) => console.log(swiper)}
                 slidesPerView={1}
                 className="mySwiper container mx-auto normal-transition relative"
+                style={{ paddingTop: navBarHeight }}
             >
                 {/* sliders */}
                 <SwiperSlide className="w-full py-10 flex justify-center items-center">
@@ -125,14 +126,14 @@ const HeroSlider = () => {
                 </SwiperSlide>
 
                 {/* Next and previous arrow */}
-                <div ref={navigationPrevRef} className="absolute active:animate-ping animate-none normal-transition dark:bg-transparent top-1/2 left-5 z-10 flex justify-center items-center -translate-y-1/2  shadow-md cursor-pointer">
+                <div ref={navigationPrevRef} className="absolute hidden active:animate-ping animate-none normal-transition dark:bg-transparent top-1/2 left-5 z-10 md:flex justify-center items-center -translate-y-1/2  shadow-md cursor-pointer">
                     <i className="bi bi-arrow-left-square text-secondary text-3xl"></i>
                 </div>
-                <div ref={navigationNextRef} className="absolute active:animate-ping animate-none normal-transition dark:bg-transparent top-1/2 right-5 z-10 flex justify-center items-center -translate-y-1/2  shadow-md cursor-pointer">
+                <div ref={navigationNextRef} className="absolute hidden active:animate-ping animate-none normal-transition dark:bg-transparent top-1/2 right-5 z-10 md:flex justify-center items-center -translate-y-1/2  shadow-md cursor-pointer">
                     <i className="bi bi-arrow-right-square text-secondary text-3xl"></i>
                 </div>
             </Swiper>
-            <div className='grid grid-cols-2 lg:grid-cols-4'>
+            <div className='grid grid-cols-2 lg:grid-cols-4 absolute bottom-0 w-full'>
                 {sliderBoxDetails.map((details, index) => (
                     <div key={details.serial} className={`py-10 relative ${sliderIndex === index + 1 ? 'bg-purple-100 dark:bg-darkLight dark:border-[#243763] ' : 'dark:border-[#243763] border-purple-100'} text-center border normal-transition`}>
                         <h1 className={`text-2xl ${sliderIndex === index + 1 ? 'font-bold dark:text-white animate__animated animate__zoomIn' : 'dark:text-gray-500'} font-semibold text-primary font-ubuntu normal-transition`}>
@@ -144,7 +145,7 @@ const HeroSlider = () => {
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     )
 }
 
