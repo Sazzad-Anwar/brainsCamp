@@ -57,7 +57,7 @@ const NavMenu = ({ inDrawer, closeDrawer }) => {
                         <Link href="/hello">
                             <a>
                                 <Dropdown overlay={ourServiceMenu} placement="bottomCenter" arrow>
-                                    <p className="navMenu">
+                                    <p className="navMenu m-0">
                                         Our Service
                                     </p>
                                 </Dropdown>
