@@ -7,15 +7,7 @@ class MyDocument extends Document {
                 <Head>
                     <link rel="manifest" href="/manifest.json" />
                     <link rel="apple-touch-icon" href="/icon.png"></link>
-                    <meta name="theme-color" content="#302d86" />
-                    <link
-                        rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-                    />
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
-                    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-                        rel="stylesheet">
-                    </link>
+                    <meta name="theme-color" content="#0F172A" />
                 </Head>
                 <body>
                     <Main />

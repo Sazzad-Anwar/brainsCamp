@@ -1,14 +1,15 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import { useState } from 'react'
-import HeroSlider from '../Components/HeroSlider'
-import NavBar from '../Components/Nav/NavBar'
-import QuotationSection from '../Components/QuotationSection'
-import Services from '../Components/Services'
-import BusinessConsultingService from '../Components/BusinessConsultingService'
-import WhyChooseUs from '../Components/WhyChooseUs'
-import Testimonial from '../Components/Testimonial'
-import PricingPackage from '../Components/PricingPackage'
-import ClientComment from '../Components/ClientComment'
+const HeroSlider = dynamic(() => import('../Components/HeroSlider'))
+const NavBar = dynamic(() => import('../Components/Nav/NavBar'))
+const QuotationSection = dynamic(() => import('../Components/QuotationSection'))
+const Services = dynamic(() => import('../Components/Services'))
+const BusinessConsultingService = dynamic(() => import('../Components/BusinessConsultingService'))
+const WhyChooseUs = dynamic(() => import('../Components/WhyChooseUs'))
+const Testimonial = dynamic(() => import('../Components/Testimonial'))
+const PricingPackage = dynamic(() => import('../Components/PricingPackage'))
+const ClientComment = dynamic(() => import('../Components/ClientComment'))
 
 export default function Home() {
 
