@@ -11,6 +11,12 @@ const Testimonial = dynamic(() => import('../Components/Testimonial'))
 const PricingPackage = dynamic(() => import('../Components/PricingPackage'))
 const ClientComment = dynamic(() => import('../Components/ClientComment'))
 
+export async function getStaticProps() {
+  return {
+    props: {}
+  }
+}
+
 export default function Home() {
 
   const [navBarHeight, setNavBarHeight] = useState(0)
