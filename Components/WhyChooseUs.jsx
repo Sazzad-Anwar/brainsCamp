@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
                                     <h1 data-wow-delay={parseFloat(index * .2) + .4} className='text-primary wow animate__animated animate__fadeInUp font-ubuntu normal-transition dark:text-white text-center lg:text-left dark:group-hover:text-secondary text-lg lg:text-3xl font-semibold'>
                                         {details.title}
                                     </h1>
-                                    <p data-wow-delay={parseFloat(index * .2) + .4} className='wow animate__animated animate__fadeInUp mt-5 lg:w-96 mx-auto mb-3 lg:mb-20 text-center lg:text-left dark:text-gray-500 font-ubuntu text-gray-500 text-base dark:group-hover:text-white normal-transition lg:text-xl font-semibold'>
+                                    <p data-wow-delay={parseFloat(index * .2) + .4} className='wow animate__animated animate__fadeInUp mt-5  mx-auto mb-3 lg:mb-20 text-center lg:text-left dark:text-gray-500 font-ubuntu text-gray-500 text-base dark:group-hover:text-white normal-transition lg:text-xl font-semibold'>
                                         {details.details}
                                     </p>
                                 </div>
