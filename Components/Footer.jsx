@@ -19,7 +19,7 @@ const Footer = () => {
                         <Branding />
                     </div>
                     <p data-wow-delay=".4s" className='wow animate__animated mt-5 mx-auto animate__fadeInUp mb-3 dark:text-gray-500 font-ubuntu text-gray-500 text-sm dark:group-hover:text-white normal-transition lg:text-xl font-semibold'>
-                        “Let’s Make Some CREATIVE IDEAS Together” is the mantra that we passionately follow at Creative Filament. To attain our objective, we will formulate proficient as well as result-oriented IT, web, branding and digital marketing solutions.
+                        “Let’s Make Some CREATIVE IDEAS Together” is the mantra that we passionately follow at BrainsCamp. To attain our objective, we will formulate proficient as well as result-oriented IT, web, branding and digital marketing solutions.
                     </p>
                     <div data-wow-delay=".4s" className='wow animate__animated animate__fadeInUp flex items-center'>
                         <a href="#" className='hover:text-secondary normal-transition text-white '>
