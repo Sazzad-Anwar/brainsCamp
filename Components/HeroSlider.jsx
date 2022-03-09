@@ -57,7 +57,7 @@ const HeroSlider = ({ navBarHeight }) => {
                 style={{ paddingTop: navBarHeight }}
             >
                 {/* sliders */}
-                <SwiperSlide SwiperSlide className="w-full py-10 flex justify-center items-center" >
+                <SwiperSlide className="w-full py-10 flex justify-center items-center" >
                     {({ isActive }) => (
                         <div className='h-auto text-center '>
                             <h1 className='text-lg text-primary lg:text-2xl xl:text-3xl 2xl:text-4xl font-saira font-bold dark:text-secondary normal-transition'>
@@ -69,7 +69,7 @@ const HeroSlider = ({ navBarHeight }) => {
                             <Image className={isActive ? 'py-5 animate__animated animate__fadeInRight' : 'py-5'} src="/sliders/slider1.png" height={420} width={1120} alt="slider1" objectFit='cover' layout='intrinsic' />
                         </div>
                     )}
-                </SwiperSlide >
+                </SwiperSlide>
                 <SwiperSlide className="w-full py-10 flex justify-center items-center">
                     {({ isActive }) => (
                         <div className='h-auto items-center grid grid-cols-2 lg:grid-cols-2'>
